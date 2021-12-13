@@ -30,6 +30,7 @@
     <form action="escribir aqui" method="post">
     <?php 
     foreach($dataCitas as $dataCita){
+        echo "hola";
         $medicoNombre = $cita->obtenerNombreMedico($dataCita["id_medico"]);
         $medicoApellido = $cita->obtenerApellidoMedico($dataCita["id_medico"]);
         $medico = $medicoNombre.' '.$medicoApellido;
