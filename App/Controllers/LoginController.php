@@ -20,7 +20,7 @@ class LoginController
 
         $correo = $_POST['correo'];
         $contrasenna = $_POST['contrasenna'];
-
+        //$tipo = $_POST['tipo'];
         $respuesta = $login->existeUsuario($correo,$contrasenna);
 
 
@@ -30,7 +30,7 @@ class LoginController
             $tipo = $login->obtenerTipo($id);
             setcookie("tipoUser",$tipo);
             
-            if($tipo === 1){
+            if($tipo === "1"){
                 require_once('Views/Paciente/inicio.php');
             }else{
                 require_once('Views/Medico/inicio.php');
@@ -41,8 +41,8 @@ class LoginController
     } 
 
     public function cerrarSesion(){
-        require_once($this->eliminarCookie());
-        require_once('Views/Home/goodbye.php');
+        //require_once($this->eliminarCookie());
+        require_once('Views/login.php');
     }
 
     public function eliminarCookie(){

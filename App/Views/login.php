@@ -17,7 +17,7 @@
 
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="contrasenna" name="contrasenna">
-        </div>
+
         <div style="padding: 0% 20% 10% 20%;">
         <div class="d-grid gap-2">
         <input type="submit" class="btn btn-primary" value="Iniciar Sesión">

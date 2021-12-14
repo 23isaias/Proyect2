@@ -1,5 +1,14 @@
-<?php require_once('Views/Layouts/menuPaciente.php');?>
-
+<?php if($_COOKIE['tipoUser'] === '1'){ ?>
+    <header>
+        <?php require_once('Views/Layouts/menuPaciente.php'); ?>
+    </header>
+<?php
+} else {?>
+    <header>
+        <?php require_once('Views/Layouts/menuMedico.php'); ?>
+    </header>
+<?php
+}?>
     <section id="a">
         <form action="?controller=Cita&&action=reprogramar&&id=<?php echo $id;?>" method="POST" >
             

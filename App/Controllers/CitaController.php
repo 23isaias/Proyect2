@@ -28,7 +28,6 @@ class CitaController
 
         $id_usuario = $_COOKIE['idUser'];
         $id_paciente = $cita->obtenerIdPaciente($id_usuario);
-        echo $id_paciente;
         $valido = $cita->guardarCita($fecha, $medico, $id_paciente, $hora);
 
         if($valido){
@@ -43,7 +42,7 @@ class CitaController
         $id_usuario = $_COOKIE['idUser'];
         $tipo_usuario = $_COOKIE['tipoUser'];
 
-        if ($tipo_usuario === 1){
+        if ($tipo_usuario === '1'){
             $id_paciente = $cita->obtenerIdPaciente($id_usuario);
             $dataCitasP = $cita->obtenerCitasPaciente($id_paciente);
             require('Views/Paciente/misCitas.php');

@@ -1,4 +1,4 @@
-<?php if($_COOKIE['tipoUser'] === 1){ ?>
+<?php if($_COOKIE['tipoUser'] === '1'){ ?>
     <header>
         <?php require_once('Views/Layouts/menuPaciente.php'); ?>
     </header>
