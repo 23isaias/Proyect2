@@ -1,7 +1,11 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-    <div class="alert alert-primary mt-3" role="alert">
-        <h1>¡Bienvenidos al SIGMED!</h1>
+<section id="A" style="border-radius: 100px 100px 100px 100px; width: 100%;  height: 100%; text-align: center; color: #f0f8ff ; float: left; background-color: blue; margin-top: 0%;">
 
-        <a href="?controller=Login&&action=index">Iniciar Sesión</a>
+</p></p><h1> Bienvenido a SIGMED </p></p></h1>
+<div class="container" style="height: 35%;">
+  <img class="img-fluid" src="\ProySIGMED\App\imagen\doctor.png" alt="sigmed" width="40%" height="30%">
+  <p> La salud es la mayor posesión. La alegría es el mayor tesoro.</p>
+  <p><a class="btn btn-success" href="?controller=Login&&action=index" role="button">Iniciar Sesión</a>
+  o     
+  <a class="btn btn-secondary" href= "">Registrar</a>
     </div>
 </main>
