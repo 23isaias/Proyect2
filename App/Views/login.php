@@ -1,7 +1,7 @@
 
 <section id="A" style="border-radius: 0px 35px 35px 0px; width: 40%;  height: 100%; text-align: center; color: #f0f8ff ; float: left; background-color: blue; margin-top: 0%;">
   </p></p><h1> Bienvenido a SIGMED </p></p></h1>
-  <img class="img-fluid" src="\ProySIGMED\App\imagen\doctor.png" alt="sigmed" width="500" height="450">
+  <img class="img-fluid" src="imagen\doctor.png" alt="sigmed" width="500" height="450">
   <p> La salud es la mayor posesión. La alegría es el mayor tesoro.</p>
   </section> 
 

@@ -39,7 +39,7 @@
         </main>
     </div>
     <div class="col-md-9 col-lg-9 col-xl-10 px-0" style="height:100%; ">
-    <img class="img-fluid rounded mx-auto d-block" src="\ProySIGMED\App\imagen\css.png" alt="sigmed" style="height:100%">
+    <img class="img-fluid rounded mx-auto d-block" src="imagen\css.png" alt="sigmed" style="height:100%">
     </div>
     <?php require_once('Views/Layouts/footer.php');?>
     
