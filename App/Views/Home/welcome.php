@@ -2,10 +2,9 @@
 
 </p></p><h1> Bienvenido a SIGMED </p></p></h1>
 <div class="container" style="height: 35%;">
-  <img class="img-fluid" src="imagen\doctor.png" alt="sigmed" width="40%" height="30%">
+  <img class="img-fluid" src="imagen\css.png" alt="sigmed" width="40%" height="30%">
   <p> La salud es la mayor posesión. La alegría es el mayor tesoro.</p>
   <p><a class="btn btn-success" href="?controller=Login&&action=index" role="button">Iniciar Sesión</a>
-  o     
-  <a class="btn btn-secondary" href= "">Registrar</a>
+
     </div>
 </main>
