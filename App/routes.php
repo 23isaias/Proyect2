@@ -2,8 +2,8 @@
 
 $controllers = array(
     'Home' => ['index'],
-    'Login'=>['index', 'ingresar', 'confirmar','error'],
-    'Cita'=>['index', 'agendar', 'mostrar'],
+    'Login'=>['index', 'ingresar', 'confirmar','error', 'cerrarSesion'],
+    'Cita'=>['index', 'agendar', 'mostrar', 'cancelar', 'datosReprogramar', 'reprogramar', 'mostrarPacientes'],
 );
 
 if (array_key_exists($controller, $controllers)) {

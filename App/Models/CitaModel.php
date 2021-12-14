@@ -88,7 +88,7 @@ class CitaModel
             }
 
 
-            public function obtenerCitas($id_paciente){
+            public function obtenerCitasPaciente($id_paciente){
                 $id_arreglado = (int)$id_paciente;
                 $sql = "SELECT * FROM citas WHERE id_paciente = $id_arreglado AND estado = 1";
         
@@ -102,6 +102,37 @@ class CitaModel
                     }     
                 return $dato;
             }
+
+            public function obtenerIdMedico($id){
+                $id_arreglado = (int)$id;
+                $sql = "SELECT * FROM medico WHERE id_usuario = $id_arreglado";
+        
+                $query = $this->db->query($sql);
+                $dato = [];
+                $respuesta = "";
+                $i=0;
+                    while($row = $query->fetch_assoc()){
+                        $dato[$i]=$row;
+                        $i++;
+                    }
+                    $respuesta = $dato[0]["id"]; 
+                    return $respuesta;
+                }
+
+                public function obtenerCitasMedico($id_medico){
+                    $id_arreglado = (int)$id_medico;
+                    $sql = "SELECT * FROM citas WHERE id_medico = $id_arreglado AND estado = 1";
+            
+                    $query = $this->db->query($sql);
+                    $dato = [];
+                    
+                    $i=0;
+                        while($row = $query->fetch_assoc()){
+                            $dato[$i]=$row;
+                            $i++;
+                        }     
+                    return $dato;
+                }
 
 
         public function obtenerNombreMedico($id_medico){
@@ -137,6 +168,58 @@ class CitaModel
             $resultado = $dato[0]['apellido'];
             return $resultado;
         }
+
+
+        public function obtenerNombrePaciente($id_paciente){
+            $id_arreglado = (int)$id_paciente;
+            $sql = "SELECT nombre 
+                    FROM paciente WHERE id = $id_arreglado";
+            $query = $this->db->query($sql);
+            $dato = [];
+            
+            $i=0;
+                while($row = $query->fetch_assoc()){
+                    $dato[$i]=$row;
+                    $i++;
+                }     
+
+            $resultado = $dato[0]['nombre'];
+            return $resultado;
+        }
+
+        public function obtenerApellidoPaciente($id_paciente){
+            $id_arreglado = (int)$id_paciente;
+            $sql = "SELECT apellido 
+                    FROM paciente WHERE id = $id_arreglado";
+            $query = $this->db->query($sql);
+            $dato = [];
+            
+            $i=0;
+                while($row = $query->fetch_assoc()){
+                    $dato[$i]=$row;
+                    $i++;
+                }     
+
+            $resultado = $dato[0]['apellido'];
+            return $resultado;
+        }
+
+        public function obtenerCedulaPaciente($id_paciente){
+            $id_arreglado = (int)$id_paciente;
+            $sql = "SELECT cedula 
+                    FROM paciente WHERE id = $id_arreglado";
+            $query = $this->db->query($sql);
+            $dato = [];
+            
+            $i=0;
+                while($row = $query->fetch_assoc()){
+                    $dato[$i]=$row;
+                    $i++;
+                }     
+
+            $resultado = $dato[0]['cedula'];
+            return $resultado;
+        }
         
 
         public function obtenerNombreHora($id_hora){
@@ -154,5 +237,26 @@ class CitaModel
             return $resultado;
         }
 
+        public function eliminar($id_cita)
+        {
+            $sql = "UPDATE citas SET estado = 0  where id = ".$id_cita.";";
+            $consulta = $this->db->query($sql);
+            if($consulta){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function actualizar($id_cita, $fecha, $id_hora)
+        {
+            $sql = "UPDATE citas SET fecha ='".$fecha."', id_horario = '".$id_hora."' where id = ".$id_cita.";";
+            $consulta = $this->db->query($sql);
+            if($consulta){
+                return true;
+            } else {
+                return false;
+            }
+        }
 
 }

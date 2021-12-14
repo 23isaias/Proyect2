@@ -1,5 +1,5 @@
 <header>
-		<?php require_once('Views/Layouts/menuPaciente.php'); ?>
+		<?php require_once('Views/Layouts/menuMedico.php'); ?>
 </header>
 
 <div style="display: table; width:100%;  height:15%;" >
@@ -7,7 +7,7 @@
 
 <div class="row" style="color:#000000">
     <div class="col">
-    <h1>Mis Citas</h1>
+    <h1>Mi Agenda</h1>
     </div>
     <div class="col">
     </div>
@@ -20,7 +20,7 @@
         <tr>
         <th >ID</th>
         <th >Fecha</th>
-        <th >Médico</th>
+        <th >Paciente</th>
         <th >Hora</th>
         <th ></th>
         <th ></th>
@@ -30,17 +30,17 @@
     
     
     <?php 
-    foreach($dataCitasP as $dataCita){
-        $medicoNombre = $cita->obtenerNombreMedico($dataCita["id_medico"]);
-        $medicoApellido = $cita->obtenerApellidoMedico($dataCita["id_medico"]);
-        $medico = $medicoNombre.' '.$medicoApellido;
+    foreach($dataCitasM as $dataCita){
+        $pacienteNombre = $cita->obtenerNombrePaciente($dataCita["id_paciente"]);
+        $pacienteApellido = $cita->obtenerApellidoPaciente($dataCita["id_paciente"]);
+        $paciente = $pacienteNombre.' '.$pacienteApellido;
         $hora = $cita->obtenerNombreHora($dataCita["id_horario"]);
         ?>
 
         <tr>
         <td><?php echo $dataCita['id']?></td>
         <th><?php echo $dataCita["fecha"] ?></th>
-        <th><?php echo $medico ?></th>
+        <th><?php echo $paciente ?></th>
         <td><?php echo $hora ?></td>
     
         <td><a href="?controller=Cita&&action=datosReprogramar&&id=<?php echo $dataCita['id'];?>" class="btn btn-primary btn-sm">Reprogramar</a></td>

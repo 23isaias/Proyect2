@@ -27,11 +27,29 @@ class LoginController
         if($respuesta){
             $id = $login->obtenerId($correo,$contrasenna);
             setcookie("idUser",$id);
+            $tipo = $login->obtenerTipo($id);
+            setcookie("tipoUser",$tipo);
             
-            require('Views/Paciente/inicio.php');
+            if($tipo === 1){
+                require_once('Views/Paciente/inicio.php');
+            }else{
+                require_once('Views/Medico/inicio.php');
+            }
         }else{
-            require('Views/errorLogin.php');
+            require_once('Views/Error/errorLogin.php');
         }
     } 
+
+    public function cerrarSesion(){
+        require_once($this->eliminarCookie());
+        require_once('Views/Home/goodbye.php');
+    }
+
+    public function eliminarCookie(){
+        unset($_COOKIE['idUser']);
+        unset($_COOKIE['tipoUser']);
+    }
+
+
 
 }
