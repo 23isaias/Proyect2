@@ -41,15 +41,7 @@ class LoginController
     } 
 
     public function cerrarSesion(){
-        //require_once($this->eliminarCookie());
         require_once('Views/login.php');
     }
-
-    public function eliminarCookie(){
-        unset($_COOKIE['idUser']);
-        unset($_COOKIE['tipoUser']);
-    }
-
-
 
 }
