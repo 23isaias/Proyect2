@@ -9,7 +9,7 @@
     </header>
 <?php
 }?>
-<div style="height:100%; width:100%" >
+<div style="height:90%; width:100%" >
     <div style="display: flex; justify-content:center; padding:2%" >
     <div class="card" style="width: 60%;">
 

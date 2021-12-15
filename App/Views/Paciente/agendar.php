@@ -1,9 +1,9 @@
 
 <?php require_once('Views/Layouts/menuPaciente.php');?>
 
-<div style="height:100%; width:100%" >
-    <div style="display: flex; justify-content:center; padding:2%" >
-    <div class="card" style="width: 60%;">
+<div style="height:90%; width:100%" >
+    <div style="display: flex; justify-content:center; padding:5%" >
+    <div class="card" style="width: 60%; min-width: 375px;">
 
   <div class="card-body">
     <h5 class="card-title">Agendar Cita</h5>

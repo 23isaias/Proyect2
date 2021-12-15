@@ -1,7 +1,7 @@
 <header>
 		<?php require_once('Views/Layouts/menuPaciente.php'); ?>
 </header>
-
+<div style="height:95%; width:100%" >
 <div style="display: table; width:100%;  height:15%;" >
             <div  style="display: table-cell; background: #fff; width:100%; height:100%; color: #ffffff; text-align:center; vertical-align:middle">
 
@@ -50,10 +50,9 @@
     <?php
     }
     ?>
-    
 
-        
     </tbody>
     </table>
+</div>
 </div>
 <?php require_once('Views/Layouts/footer.php');?>

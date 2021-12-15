@@ -9,12 +9,13 @@
     </header>
 <?php
 }?>
-<section id="confirm">
+    <div style="height:85%; width:100%" >
 <div class="alert alert-primary mt-3" role="alert">
     <h3>Su cita ha sido agendada exitosamente.</h3>
     <p>Se le ha enviado un correo con los datos de su cita.</p>
     </div>
-    <img class="img-fluid rounded mx-auto d-block" src="\ProySIGMED\App\imagen\css.png" alt="sigmed" style="height:100%">
+    <img class="img-fluid rounded mx-auto d-block" src="imagen\css1.png" alt="sigmed" style="height:65%">
     <div style="display: flex; justify-content:center">
     <a class="btn btn-outline-primary" href="?controller=Cita&&action=mostrar">Pulse para Ver los Detalles de su Cita</a>
-</section>
+    </div>  </div>
+<?php require_once('Views/Layouts/footer.php');?>
