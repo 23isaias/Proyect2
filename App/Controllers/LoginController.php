@@ -1,7 +1,6 @@
 <?php
 
 require('Models/LoginModel.php');
-//require('Models/CitaModel.php');
 
 class LoginController
 {

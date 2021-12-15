@@ -3,7 +3,8 @@
 $controllers = array(
     'Home' => ['index'],
     'Login'=>['index', 'ingresar', 'confirmar','error', 'cerrarSesion'],
-    'Cita'=>['index', 'agendar', 'mostrar', 'cancelar', 'datosReprogramar', 'reprogramar', 'mostrarPacientes'],
+    'Register' => ['index'],
+    'Cita'=>['index', 'agendar', 'mostrar', 'cancelar', 'datosReprogramar', 'reprogramar', 'mostrarPacientes']
 );
 
 if (array_key_exists($controller, $controllers)) {
@@ -33,6 +34,9 @@ function call($controller, $action)
             break;
         case 'Cita':
             $controller = new CitaController();
+            break;
+        case 'Register':
+            $controller = new RegisterController();
             break;
         default:
             # código...
