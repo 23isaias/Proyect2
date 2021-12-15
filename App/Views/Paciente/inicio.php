@@ -5,7 +5,7 @@
 </div>
     <img class="img-fluid rounded mx-auto d-block" src="imagen\css1.png" alt="sigmed" style="height:65%"><br>
     <div style="display: flex; justify-content:center">
-    <a class="btn btn-outline-primary" href="?controller=Cita&&action=index">Pulse Aquí para avanzar</a>
+    <a class="btn btn-primary" href="?controller=Cita&&action=index">Pulse Aquí para avanzar</a>
     </div>
     </div>
 <?php require_once('Views/Layouts/footer.php');?>

@@ -5,13 +5,11 @@
 <div style="display: table; width:100%;  height:15%;" >
             <div  style="display: table-cell; background: #fff; width:100%; height:100%; color: #ffffff; text-align:center; vertical-align:middle">
 
-<div class="row" style="color:#000000">
     <div class="col">
     <h1>Pacientes</h1>
     </div>
-    <div class="col">
-    </div>
-</div>
+
+
 </div>
 </div>
 <div style="padding:2%">

@@ -1,12 +1,12 @@
 
 <?php require_once('Views/Layouts/menuPaciente.php');?>
-
+<style>body{background:#B9FFFF;}</style>
 <div style="height:90%; width:100%" >
     <div style="display: flex; justify-content:center; padding:5%" >
     <div class="card" style="width: 60%; min-width: 375px;">
 
   <div class="card-body">
-    <h5 class="card-title">Agendar Cita</h5>
+    <h5 class="card-title"><div style="display: flex; justify-content:center;">Agendar Cita</div></h5>
     <p class="card-text">Seleccione los detalles de su preferencia para agendar su cita</p>
   </div>
 
@@ -40,8 +40,10 @@
             </li>
   </ul>
   <div class="card-body">
+  <div style="display: flex; justify-content:center;">
   <input class="btn btn-primary" type="submit" value= "Agendar">
   </div>
+        </div>
 </div>
 </div>
 </div>
