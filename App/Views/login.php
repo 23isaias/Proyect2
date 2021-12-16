@@ -33,10 +33,8 @@
   <section id="E" style="width: 60%; height: 5%; text-align: center; float: right;">
 <div style="padding: 0% 30% 0% 30%;">
       <div class="d-grid gap-2">
-      <h6> Cree una cuenta nueva</h6>
-          <a class="btn btn-success" href="?controller=Register&&action=index" role="button">Registrarse</a><p></p> 
-      </div>
-          </div>
+      
+      
     </section>
 
 
