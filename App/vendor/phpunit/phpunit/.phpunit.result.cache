@@ -1,0 +1,1 @@
+{"version":1,"defects":{"LoginModelTest::testExisteUsuario":4,"Error":4,"LoginTest::testExisteUsuario with data set \"Caso 1\"":4},"times":{"LoginModelTest::testExisteUsuario":0.341,"Error":0.005,"LoginTest::testExisteUsuario with data set \"Caso 1\"":0.099}}

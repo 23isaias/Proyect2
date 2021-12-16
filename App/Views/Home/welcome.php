@@ -10,7 +10,7 @@
 </p></p><h1> BIENVENIDO A SIGMED </h1></h1>
   <p> Aquí podrá gestionar y agendar sus citas médicas <br>para su atención en alguna de las policlínicas <br> de la Caja de Seguro Social </p>
  <p> La salud es la mayor posesión. La alegría es el mayor tesoro.</p>
-  <p><a class="btn btn-primary" href="?controller=Login&&action=index" role="button">Iniciar Sesión</a> 
-  
+  <p><a class="btn btn-primary" href="?controller=Login&&action=index" role="button">Iniciar Sesión</a> </p> o
+  <p><a class="btn btn-secondary" href="?controller=Register&&action=index" role="button">Registrarse</a> </p>
 
   </section> 

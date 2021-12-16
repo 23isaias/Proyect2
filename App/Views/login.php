@@ -34,7 +34,9 @@
 <div style="padding: 0% 30% 0% 30%;">
       <div class="d-grid gap-2">
       
-      
+      </div>
+        <a class="btn btn-success" href="?controller=Register&&action=index" role="button">Registrarse</a>
+      </div>
     </section>
 
 
