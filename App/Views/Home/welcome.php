@@ -5,7 +5,7 @@
  <p> La salud es la mayor posesión. La alegría es el mayor tesoro.</p>
   <p><a class="btn btn-success" href="?controller=Login&&action=index" role="button">Iniciar Sesión</a> o 
   <a class="btn btn-secondary" href="?controller=Register&&action=index" role="button">Registrarse</a>
-  <div class="container" style="height: 30%;">
+  <div class="container" style="height: 20%;">
   <img class="img-fluid" src="imagen\css.png" alt="sigmed" width="40%" height="20%">
 
     </div>
