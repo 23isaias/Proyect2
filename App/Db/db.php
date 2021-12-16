@@ -1,5 +1,6 @@
 <?php
 
+// se crea una clase para la conexion a la base de datos
 class Conexion
 {
 
@@ -11,12 +12,3 @@ class Conexion
 
 }
 
-/*$con = new Conexion();
-
-if($con->conectar()){
-    echo "conexion exitosa";
-}
-else {
-    echo "a conexion ha fallado";
-}
-*/

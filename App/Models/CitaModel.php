@@ -11,7 +11,7 @@ class CitaModel
     }
 
 
-
+    // listar medicos para la vista agendar
     public function listarMedicos(){
         
         $sql = "SELECT * FROM  medico;";
@@ -25,6 +25,7 @@ class CitaModel
             return $medicos;
         }
 
+        // obtener horarios para la vista agendar
         public function obtenerHorarios(){
             $sql = "SELECT * FROM  horario;";
             $query = $this->db->query($sql);
@@ -37,7 +38,7 @@ class CitaModel
                 return $horario;
         }
 
-
+        // almacenar datos de la nueva cita 
         public function guardarCita($fecha,$idMedico,$idPaciente,$idHorario){
             $estado = 1;
             $rid_medico = (int)$idMedico;
@@ -71,6 +72,7 @@ class CitaModel
             return $respuesta;
         }
 
+        // obtener id del paciente para mostrar en la vista del medico
         public function obtenerIdPaciente($id){
             $id_arreglado = (int)$id;
             $sql = "SELECT * FROM paciente WHERE id_usuario = $id_arreglado";
@@ -87,7 +89,7 @@ class CitaModel
                 return $respuesta;
             }
 
-
+            // obtener datos de las citas para la vista Mis citas del paciente
             public function obtenerCitasPaciente($id_paciente){
                 $id_arreglado = (int)$id_paciente;
                 $sql = "SELECT * FROM citas WHERE id_paciente = $id_arreglado AND estado = 1";
@@ -103,6 +105,7 @@ class CitaModel
                 return $dato;
             }
 
+            // obtener id del medico logueado
             public function obtenerIdMedico($id){
                 $id_arreglado = (int)$id;
                 $sql = "SELECT * FROM medico WHERE id_usuario = $id_arreglado";
@@ -119,6 +122,8 @@ class CitaModel
                     return $respuesta;
                 }
 
+
+                // obtener datos de citas para la vista Mi agenda del medico
                 public function obtenerCitasMedico($id_medico){
                     $id_arreglado = (int)$id_medico;
                     $sql = "SELECT * FROM citas WHERE id_medico = $id_arreglado AND estado = 1";
@@ -134,7 +139,7 @@ class CitaModel
                     return $dato;
                 }
 
-
+        // obtener nombre del medico para mostrar en la vista agendar del paciente
         public function obtenerNombreMedico($id_medico){
             $id_arreglado = (int)$id_medico;
             $sql = "SELECT nombre 
@@ -152,6 +157,7 @@ class CitaModel
             return $resultado;
         }
 
+        // obtener apellido del medico para mostrar en la vista agendar del paciente
         public function obtenerApellidoMedico($id_medico){
             $id_arreglado = (int)$id_medico;
             $sql = "SELECT apellido 
@@ -169,7 +175,7 @@ class CitaModel
             return $resultado;
         }
 
-
+        // obtener nombre del paciente para la vista pacientes del medico
         public function obtenerNombrePaciente($id_paciente){
             $id_arreglado = (int)$id_paciente;
             $sql = "SELECT nombre 
@@ -187,6 +193,7 @@ class CitaModel
             return $resultado;
         }
 
+        // obtener apellido para la vista pacientes del medico
         public function obtenerApellidoPaciente($id_paciente){
             $id_arreglado = (int)$id_paciente;
             $sql = "SELECT apellido 
@@ -204,6 +211,7 @@ class CitaModel
             return $resultado;
         }
 
+        // obtener cedula del paciente para la vista pacientes del medico
         public function obtenerCedulaPaciente($id_paciente){
             $id_arreglado = (int)$id_paciente;
             $sql = "SELECT cedula 
@@ -221,7 +229,7 @@ class CitaModel
             return $resultado;
         }
         
-
+        // obtener datos de horario para mostrar enl a vista agendar del paciente
         public function obtenerNombreHora($id_hora){
             $id_arreglado = (int)$id_hora;
             $sql = "SELECT franja_horaria FROM horario WHERE id = $id_hora";
@@ -237,6 +245,7 @@ class CitaModel
             return $resultado;
         }
 
+        // cambiar el estado de una cita para que se muestre como eliminada
         public function eliminar($id_cita)
         {
             $sql = "UPDATE citas SET estado = 0  where id = ".$id_cita.";";
@@ -248,6 +257,7 @@ class CitaModel
             }
         }
 
+        // actualizar los datos de una cita en la tabla citas (reprogramar)
         public function actualizar($id_cita, $fecha, $id_hora)
         {
             $sql = "UPDATE citas SET fecha ='".$fecha."', id_horario = '".$id_hora."' where id = ".$id_cita.";";

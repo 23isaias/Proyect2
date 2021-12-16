@@ -15,7 +15,7 @@ class RegisterController
         require_once('Views/register.php');
     }
 
-
+    // funcion para registrar una nueva cuenta en el sistema
     public function registrar(){
         $register = new RegisterModel();
 
@@ -29,6 +29,7 @@ class RegisterController
         $correo = $_POST['correo'];
         $contrasenna = $_POST['contrasenna'];
 
+        // crear una nueva cuenta
         $respuesta = $register->crearCuenta($cedula,$nombre,$apellido,$correo,$contrasenna);
 
         require('Views/login.php');

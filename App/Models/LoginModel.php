@@ -31,7 +31,7 @@ class LoginModel
     }
             
     
-
+    // obtener id del usuario logueado
     public function obtenerId($correo,$contrasenna){
         $sql = "SELECT * FROM usuario WHERE email = '$correo' AND contrasenna = '$contrasenna'";
 
@@ -49,6 +49,7 @@ class LoginModel
         return $respuesta;
     }
 
+    // obtener tipo de usuario logueado 
     public function obtenerTipo($id){
         $sql = "SELECT id_tipo FROM usuario WHERE id = '$id'";
 
