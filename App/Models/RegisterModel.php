@@ -10,7 +10,7 @@ class RegisterModel
             
         }
 
-
+    // crear una nueva cuenta en el sistema
     public function crearCuenta($cedula,$nombre,$apellido,$correo,$contrasenna){
             $usuario = false;
             $paciente = false;
@@ -23,7 +23,8 @@ class RegisterModel
             }
 
         }
-
+        
+        // introducir datos en la tabla usuario 
         public function CrearUsuario($cedula,$nombre,$apellido,$correo,$contrasenna){
             $tipo_usuario = 1;
         
@@ -36,6 +37,7 @@ class RegisterModel
             }
         }
 
+        // obtener id del usuario creado 
         public function getIdUsuario(){
             $sql = "select MAX(id) AS max_id_user FROM usuario";
 
@@ -52,7 +54,7 @@ class RegisterModel
             return $respuesta;
         }
 
-
+        // introducir datos en la tabla paciente
         public function CrearPaciente($cedula,$nombre,$apellido){
             $id_usuario = $this->getIdUsuario();
         

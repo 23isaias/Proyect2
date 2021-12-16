@@ -1,12 +1,15 @@
 <?php
 
+// Se especifican los controladores y las acciones de cada uno 
 $controllers = array(
     'Home' => ['index'],
     'Login'=>['index', 'ingresar', 'confirmar','error', 'cerrarSesion'],
-    'Register' => ['index'],
+    'Register' => ['index', 'registrar'],
     'Cita'=>['index', 'agendar', 'mostrar', 'cancelar', 'datosReprogramar', 'reprogramar', 'mostrarPacientes']
 );
 
+
+// Verificar si se ha captado el controlador y acción
 if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
         call($controller, $action);
@@ -17,6 +20,7 @@ if (array_key_exists($controller, $controllers)) {
     call('Home', 'index');
 }
 
+// llamar al controlador y la acción y crear los objetos de clases
 function call($controller, $action)
 {
 
@@ -39,7 +43,6 @@ function call($controller, $action)
             $controller = new RegisterController();
             break;
         default:
-            # código...
             break;
     }
 
