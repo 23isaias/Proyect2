@@ -7,10 +7,6 @@
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -34,7 +30,7 @@ CREATE TABLE `citas` (
   `id_medico` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
   `id_horario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 --
 -- Volcado de datos para la tabla `citas`
@@ -82,7 +78,7 @@ CREATE TABLE `especialidad` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `descripcion` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+)
 
 --
 -- Volcado de datos para la tabla `especialidad`
@@ -104,7 +100,7 @@ INSERT INTO `especialidad` (`id`, `nombre`, `descripcion`) VALUES
 CREATE TABLE `horario` (
   `id` int(11) NOT NULL,
   `franja_horaria` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 --
 -- Volcado de datos para la tabla `horario`
@@ -142,7 +138,7 @@ CREATE TABLE `medico` (
   `id_usuario` int(11) NOT NULL,
   `id_especialidad` int(11) NOT NULL,
   `id_policlinica` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 --
 -- Volcado de datos para la tabla `medico`
@@ -172,7 +168,7 @@ CREATE TABLE `paciente` (
   `apellido` varchar(50) NOT NULL,
   `cedula` varchar(50) NOT NULL,
   `id_usuario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 --
 -- Volcado de datos para la tabla `paciente`
@@ -196,7 +192,7 @@ CREATE TABLE `policlinica` (
   `ubicacion` varchar(50) NOT NULL,
   `hora_apertura` varchar(20) NOT NULL,
   `hora_cierre` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 --
 -- Volcado de datos para la tabla `policlinica`
@@ -218,7 +214,7 @@ INSERT INTO `policlinica` (`id`, `nombre`, `telefono`, `ubicacion`, `hora_apertu
 CREATE TABLE `tipo_usuario` (
   `id` int(11) NOT NULL,
   `nombre` varchar(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 --
 -- Volcado de datos para la tabla `tipo_usuario`
@@ -239,7 +235,7 @@ CREATE TABLE `usuario` (
   `email` varchar(100) NOT NULL,
   `contrasenna` varchar(20) NOT NULL,
   `id_tipo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 --
 -- Volcado de datos para la tabla `usuario`
