@@ -35,6 +35,7 @@
       <div class="d-grid gap-2">
       
       </div>
+      <p>Cree una nueva cuenta</p>
         <a class="btn btn-success" href="?controller=Register&&action=index" role="button">Registrarse</a>
       </div>
     </section>
