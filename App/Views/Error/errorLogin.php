@@ -4,5 +4,5 @@
     </div>
     <img class="img-fluid rounded mx-auto d-block" src="imagen\css1.png" alt="sigmed" style="height:100%">
     <div style="display: flex; justify-content:center">
-    <a class="btn btn-danger" href="?controller=Cita&&action=index">Pulse para Repetir el Intento</a>
+    <a class="btn btn-danger" href="?controller=Login&&action=index">Pulse para Repetir el Intento</a>
 </section>

@@ -118,5 +118,78 @@ class CitaTest extends TestCase
     }
 
     
-    
+    //METODO obtenerNombreMedico
+    // Proveedor para la funcion obtenerNombreMedico
+    public function obtenerNombreMedicoProveedor(){
+        return [
+            'Caso 1' => ['12']
+        ];
+    }
+    /**
+    * @dataProvider obtenerNombreMedicoProveedor
+    */
+    // Funcion para verificar que obtenerNombreMedico retorne datos
+    public function testObtenerNombreMedico($id)
+    {
+        $test = new CitaModel();
+        $this->assertNotEmpty($test->obtenerNombreMedico($id));
+        $this->assertIsString($test->obtenerNombreMedico($id), 'it is string');
+    }
+
+
+    //METODO obtenerApellidoMedico
+    // Proveedor para la funcion obtenerApellidoMedico
+    public function obtenerApellidoMedicoProveedor(){
+        return [
+            'Caso 1' => ['12']
+        ];
+    }
+    /**
+    * @dataProvider obtenerApellidoMedicoProveedor
+    */
+    // Funcion para verificar que obtenerApellidoMedico retorne datos
+    public function testObtenerApellidoMedico($id)
+    {
+        $test = new CitaModel();
+        $this->assertNotEmpty($test->obtenerApellidoMedico($id));
+        $this->assertIsString($test->obtenerApellidoMedico($id), 'it is string');
+    }
+
+
+    //METODO obtenerCedulaPaciente
+    // Proveedor para la funcion obtenerCedulaPaciente
+    public function obtenerCedulaPacienteProveedor(){
+        return [
+            'Caso 1' => ['6']
+        ];
+    }
+    /**
+    * @dataProvider obtenerCedulaPacienteProveedor
+    */
+    // Funcion para verificar que obtenerCedulaPaciente retorne datos
+    public function testCedulaPaciente($id)
+    {
+        $test = new CitaModel();
+        $this->assertNotEmpty($test->obtenerCedulaPaciente($id));
+    }
+
+
+    //METODO obtenerNombreHora
+    // Proveedor para la funcion obtenerNombreHora
+    public function obtenerNombreHoraProveedor(){
+        return [
+            'Caso 1' => ['6']
+        ];
+    }
+    /**
+    * @dataProvider obtenerNombreHoraProveedor
+    */
+    // Funcion para verificar que obtenerNombreHora retorne datos
+    public function testOtenerNombreHora($id)
+    {
+        $test = new CitaModel();
+        $this->assertNotEmpty($test->obtenerNombreHora($id));
+    }
+
+
 }
